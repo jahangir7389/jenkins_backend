@@ -14,7 +14,7 @@ pipeline {
     stage('Test') {
       steps {
 			dir('.'){
-				sh 'docker container run --rm -p 8001:8080 --name python -d jahangir7389/jenkins-backend-app ' 
+				sh 'docker container run --rm -p 8002:8080 --name python -d jahangir7389/jenkins-backend-app ' 
 				sh 'sleep 5'
 				sh 'curl -I http://localhost:8001'
 			}
